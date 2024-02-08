@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  graph_based:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+      args:
+        - C_SOURCE_FILE=/file_system/i_o.c
+    volumes:
+      - .:/app

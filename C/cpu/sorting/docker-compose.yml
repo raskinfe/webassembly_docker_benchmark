@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  graph_based:
+    build:
+      context: ../../
+      dockerfile: Dockerfile
+      args:
+        - C_SOURCE_FILE=/cpu/sorting/quick_sort.c
+    volumes:
+      - .:/app

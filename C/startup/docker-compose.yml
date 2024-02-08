@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  memory:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - C_SOURCE_FILE=/startup/startup.c
+    volumes:
+      - .:/app

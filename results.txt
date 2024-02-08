@@ -1,0 +1,499 @@
+- cpu
+	- compression
+		- Native average == .027187000
+		- Wasm average === .100134900
+		- Docker average === .059732500
+	- encoding
+		- Native average == .000130900
+		- Wasm average === .000081000
+		- Docker average === .000187200
+
+	- encryption
+		- Native average == .000059100
+		- Wasm average === .000075100
+		- Docker average === .000133000
+
+
+	- graph_based
+		- Native average == .000227100
+		- Wasm average === .000103100
+		- Docker average === .000324400
+
+	- Hashing
+		- Native average == .000065500
+		- Wasm average === .000066300
+		- Docker average === .000227500
+
+
+	- Matrix_multiplication
+		- Native average == .000020300
+		- Wasm average === .000052000
+		- Docker average === .000032700
+
+
+	- Quick sort
+		- Native average == .009076700
+		- Wasm average === .014178200
+		- Docker average === .006566200
+
+
+- Startup time
+	
+	1: 25025256
+	2: 20687603
+	3: 25651863
+	4: 27629494
+	5: 28760886
+	6: 23266945
+	7: 28799844
+	8: 28735366
+	9: 29419680
+	10: 22165917
+	Average Startup Time for native_executable: 26014285 nanoseconds
+	1: 1571981000
+	2: 117762781
+	3: 105139868
+	4: 115647131
+	5: 105661216
+	6: 98608389
+	7: 97857929
+	8: 96058889
+	9: 95983110
+	10: 60104032
+	Average Startup Time for WebAssembly (Wasmer): 246480434 nanoseconds
+	Creating startup_memory_1 ... done
+	1: 83883761947
+	Removing startup_memory_1 ... done
+	Removing network startup_default
+	Creating network "startup_default" with the default driver
+	Creating startup_memory_1 ... done
+	2: 14547328109
+	Removing startup_memory_1 ... done
+	Removing network startup_default
+	Creating network "startup_default" with the default driver
+	Creating startup_memory_1 ... done
+	3: 12950707686
+	Removing startup_memory_1 ... done
+	Removing network startup_defaultclear
+	Creating network "startup_default" with the default driver
+	Creating startup_memory_1 ... done
+	4: 14869067793
+	Removing startup_memory_1 ... done
+	Removing network startup_default
+	Creating network "startup_default" with the default driver
+	Creating startup_memory_1 ... done
+	5: 10975918028
+	Removing startup_memory_1 ... done
+	Removing network startup_default
+	Creating network "startup_default" with the default driver
+	Creating startup_memory_1 ... done
+	6: 9586390006
+	Removing startup_memory_1 ... done
+	Removing network startup_default
+	Creating network "startup_default" with the default driver
+	Creating startup_memory_1 ... done
+	7: 8893369790
+	Removing startup_memory_1 ... done
+	Removing network startup_default
+	Creating network "startup_default" with the default driver
+	Creating startup_memory_1 ... done
+	8: 10645969159
+	Removing startup_memory_1 ... done
+	Removing network startup_default
+	Creating network "startup_default" with the default driver
+	Creating startup_memory_1 ... done
+	9: 9565668859
+	Removing startup_memory_1 ... done
+	Removing network startup_default
+	Creating network "startup_default" with the default driver
+	Creating startup_memory_1 ... done
+	10: 9552437570
+	Removing startup_memory_1 ... done
+	Removing network startup_default
+	Average Startup Time for Docker container: 18547061894 nanoseconds
+
+
+- File system
+
+	Compiling C file with gcc...
+	=============================
+	Run 1 - Write Time: 53.168877 seconds
+	Read Time: 12.661853 seconds
+	Run 2 - Write Time: 53.224890 seconds
+	Read Time: 13.474420 seconds
+	Run 3 - Write Time: 53.067088 seconds
+	Read Time: 16.125215 seconds
+	Run 4 - Write Time: 53.662303 seconds
+	Read Time: 13.464240 seconds
+	Run 5 - Write Time: 53.268557 seconds
+	Read Time: 14.286655 seconds
+	Run 6 - Write Time: 54.600762 seconds
+	Read Time: 14.234229 seconds
+	Run 7 - Write Time: 52.522681 seconds
+	Read Time: 13.887956 seconds
+	Run 8 - Write Time: 52.295665 seconds
+	Read Time: 14.557461 seconds
+	Run 9 - Write Time: 53.663391 seconds
+	Read Time: 13.985198 seconds
+	Run 10 - Write Time: 53.097464 seconds
+	Read Time: 16.356388 seconds
+	Average Write Time over 10 runs: 53.257167800 seconds
+	Average Read Time over 10 runs: 14.303361500 seconds
+	=============================
+
+
+
+
+	=============================
+	Compiling to WebAssembly with emcc...
+	=============================
+	Run 1 - Write Time: 62.497290 seconds
+	Read Time: 17.874520 seconds
+	Run 2 - Write Time: 63.447981 seconds
+	Read Time: 16.823774 seconds
+	Run 3 - Write Time: 59.609956 seconds
+	Read Time: 18.275049 seconds
+	Run 4 - Write Time: 62.330782 seconds
+	Read Time: 18.198600 seconds
+	Run 5 - Write Time: 66.604653 seconds
+	Read Time: 17.415923 seconds
+	Run 6 - Write Time: 65.075997 seconds
+	Read Time: 17.435617 seconds
+	Run 7 - Write Time: 62.782423 seconds
+	Read Time: 17.891874 seconds
+	Run 8 - Write Time: 64.339909 seconds
+	Read Time: 15.088185 seconds
+	Run 9 - Write Time: 61.193045 seconds
+	Read Time: 19.226668 seconds
+	Run 10 - Write Time: 63.531556 seconds
+	Read Time: 17.404007 seconds
+	Average Write Time over 10 runs: 63.141359200 seconds
+	Average Read Time over 10 runs: 17.563421700 seconds
+	=============================
+
+
+
+
+	=============================
+	Running docker-compose build...
+	=============================
+	=============================
+	Running docker-compose up...
+	=============================
+	Starting file_system_graph_based_1 ... done
+	Attaching to file_system_graph_based_1
+	graph_based_1  | Run 1 - Write Time: 54.175287 seconds
+	graph_based_1  | Read Time: 11.255834 seconds
+	graph_based_1  | Run 2 - Write Time: 53.416023 seconds
+	graph_based_1  | Read Time: 15.842409 seconds
+	graph_based_1  | Run 3 - Write Time: 48.466469 seconds
+	graph_based_1  | Read Time: 14.556872 seconds
+	graph_based_1  | Run 4 - Write Time: 50.253203 seconds
+	graph_based_1  | Read Time: 12.934112 seconds
+	graph_based_1  | Run 5 - Write Time: 53.083105 seconds
+	graph_based_1  | Read Time: 13.575658 seconds
+	graph_based_1  | Run 6 - Write Time: 53.335075 seconds
+	graph_based_1  | Read Time: 15.763058 seconds
+	graph_based_1  | Run 7 - Write Time: 55.867832 seconds
+	graph_based_1  | Read Time: 12.283127 seconds
+	graph_based_1  | Run 8 - Write Time: 54.439563 seconds
+	graph_based_1  | Read Time: 15.275955 seconds
+	graph_based_1  | Run 9 - Write Time: 55.903277 seconds
+	graph_based_1  | Read Time: 13.417333 seconds
+	graph_based_1  | Run 10 - Write Time: 53.456711 seconds
+	graph_based_1  | Read Time: 13.731591 seconds
+
+
+- Memory
+	Memory consumption for native_executable:
+	430
+	431
+	432
+	432
+	432
+	433
+	433
+	434
+	434
+	433
+	Average Memory Consumption: 432 MiB
+	Memory consumption for simple_memory.wasm:
+	433
+	431
+	431
+	450
+	435
+	436
+	436
+	436
+	438
+	434
+	Average Memory Consumption: 436 MiB
+	Memory consumption for docker-compose.yml:
+	Starting memory_memory_1 ... done
+	440
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	439
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	442
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	446
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	446
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	448
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	450
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	428
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	433
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	434
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Average Memory Consumption: 440 MiB
+
+	Memory consumption for native_executable:
+	417
+	419
+	420
+	420
+	421
+	421
+	422
+	422
+	422
+	423
+	Average Memory Consumption: 420 MiB
+	Memory consumption for simple_memory.wasm:
+	424
+	425
+	426
+	422
+	425
+	425
+	423
+	423
+	425
+	424
+	Average Memory Consumption: 424 MiB
+	Memory consumption for docker-compose.yml:
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	422
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	421
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	421
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	422
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	424
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	422
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	427
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	422
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	426
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	426
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Average Memory Consumption: 423 MiB
+
+	Memory consumption for native_executable:
+	412
+	412
+	413
+	413
+	414
+	414
+	414
+	414
+	414
+	414
+	Average Memory Consumption: 413 MiB
+	Memory consumption for simple_memory.wasm:
+	415
+	414
+	416
+	416
+	417
+	417
+	417
+	416
+	416
+	417
+	Average Memory Consumption: 416 MiB
+	Memory consumption for docker-compose.yml:
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	402
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	403
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	402
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	401
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	404
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	402
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	402
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	405
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	405
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Creating network "memory_default" with the default driver
+	Creating memory_memory_1 ... done
+	406
+	Stopping memory_memory_1 ... done
+	Removing memory_memory_1 ... done
+	Removing network memory_default
+	Average Memory Consumption: 403 MiB
+
+
+
+
+
+
+
+
+
+
+	Architecture:            aarch64
+  CPU op-mode(s):        32-bit, 64-bit
+  Byte Order:            Little Endian
+CPU(s):                  4
+  On-line CPU(s) list:   0-3
+Vendor ID:               ARM
+  Model name:            Cortex-A53
+    Model:               4
+    Thread(s) per core:  1
+    Core(s) per cluster: 4
+    Socket(s):           -
+    Cluster(s):          1
+    Stepping:            r0p4
+    CPU(s) scaling MHz:  100%
+    CPU max MHz:         1400.0000
+    CPU min MHz:         600.0000
+    BogoMIPS:            38.40
+    Flags:               fp asimd evtstrm crc32 cpuid
+Caches (sum of all):     
+
+Linux raspberrypi 6.1.0-rpi7-rpi-v8 #1 SMP PREEMPT Debian 1:6.1.63-1+rpt1 (2023-11-24) aarch64 GNU/Linux
+
+
